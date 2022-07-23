@@ -6,7 +6,6 @@ volumeIcon = wrapper.querySelector(".word i"),
 removeIcon = wrapper.querySelector(".search span");
 let audio;
 
-
 //data function
 function data(result,word)
 {
@@ -17,7 +16,7 @@ function data(result,word)
     else
     {
         //When api return found.
-        //console.log(result);
+        console.log(result);
         wrapper.classList.add("active"); //we add active class to the wrapper element.
         //Now,pass the particular response data to a particular HTML element 
 
@@ -40,15 +39,24 @@ function data(result,word)
             synonyms.parentElement.style.display = "block";
             synonyms.innerHTML=""; 
             //First five synonyms will print.
-            for (let i=0;i<5;i++){
-            let tag = `<span onclick = search('${def.synonyms[i]}')>${def.synonyms[i]},</span>`;
-            tag = i == 4 ? tag = `<span onclick="search('${definitions.synonyms[i]}')">${definitions.synonyms[4]}</span>` : tag;
-            synonyms.insertAdjacentHTML("beforeend",tag); 
-            //passing five synonyms inside synonoyms div
-            //insertAdjacentHTML(position, html)
-        }
-     }     
-   }  
+            for (let i=0;i<5;i++)
+            {                 
+                if(def.synonyms[i] == undefined) 
+                {
+                    
+                } 
+                else 
+                {
+                    let tag = `<span onclick = search('${def.synonyms[i]}')>${def.synonyms[i]},</span>`;
+                    tag = i == 4 ? tag = `<span onclick="search('${definitions.synonyms[i]}')">${definitions.synonyms[4]}</span>` : tag;
+                    synonyms.insertAdjacentHTML("beforeend",tag); 
+                    //passing five synonyms inside synonoyms div
+                    //insertAdjacentHTML(position, html)
+                }
+                     
+            }
+        }     
+    }  
 }
 
 //Search synonyms function
@@ -80,7 +88,6 @@ function fetchApi(word)
     });
 }
 
-
 searchInput.addEventListener("keyup",e =>{
     let word = e.target.value.replace(/\s+/g, ' ');
     if(e.key === "Enter" && word){
@@ -90,7 +97,6 @@ searchInput.addEventListener("keyup",e =>{
     }
     
 });
-
 
 //addEventListener(event, function, useCapture)
 volumeIcon.addEventListener("click",()=>{
