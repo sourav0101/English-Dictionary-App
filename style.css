@@ -11,12 +11,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #24d4f7;
-  background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/main_image_star-forming_region_carina_nircam_final-5mb.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center top;
-  background-attachment: fixed;
+  
 }
 ::selection{
   color: #fff;
