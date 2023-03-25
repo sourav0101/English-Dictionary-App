@@ -41,11 +41,12 @@ body{
   width: 330px;
   border-radius: 7px;
   padding: 25px 28px 45px;
-  background: rgba(238, 230, 230, 0.27);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(19, 18, 18, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2px);
+-webkit-backdrop-filter: blur(2px);
+border: 1px solid rgba(19, 18, 18, 0.14);
 }
 .wrapper header{    
   font-size: 28px;
