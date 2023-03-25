@@ -43,7 +43,7 @@ function data(result,word)
             {                 
                 if(def.synonyms[i] == undefined) 
                 {
-                    
+                    //
                 } 
                 else 
                 {
@@ -51,7 +51,7 @@ function data(result,word)
                     tag = i == 4 ? tag = `<span onclick="search('${definitions.synonyms[i]}')">${definitions.synonyms[4]}</span>` : tag;
                     synonyms.insertAdjacentHTML("beforeend",tag); 
                     //passing five synonyms inside synonoyms div
-                    //insertAdjacentHTML(position, html)
+                    //insertAdjacentHTML(position, html).  
                 }
                      
             }
@@ -114,4 +114,5 @@ removeIcon.addEventListener("click",()=>{
     infoText.style.color = "#9a9a9a"; 
     infoText.innerHTML = "Type any existing word and press enter to get meaning, example, synonyms, etc.";
 });
+
 
